@@ -368,6 +368,7 @@ font-family: 'Noto Sans JP', sans-serif; */
 /* ******* MAIN-CONTENT ******** */
 /* *********** MEDIAQUERY DEVICES ************ */
 /* NOTA: Sviluppo con priorità desktop-first */
+/* MEDIA- QUERY DA RISCRIVERE AL CONTRARIO */
 
 /* Device extra small (xs) - max width - 768px */
 @media screen and (max-width:768px){
@@ -390,10 +391,16 @@ font-family: 'Noto Sans JP', sans-serif; */
     display: none;
   } */
 
+  .main-content .box-albums-flex .album{
+    width: calc(100% / 2);
+    max-width: 300px;
+    padding-right: 5px;
+  }
+
 }
 /* Device extra-small (xs) - max width - 768px */
 
-
+/* inizio sm */
 @media screen and (min-width:768px){
 
   .sidebar-sx{
@@ -409,21 +416,37 @@ font-family: 'Noto Sans JP', sans-serif; */
 
   .main-content .box-albums-flex .album{
     width: calc(100% / 2);
-    max-width: 300px;
+    max-width: 500px;
+    padding-right: 5px;
+  }
+
+
+
+}
+
+/* inizio md */
+@media screen and (min-width:992px){
+
+  .main-content .box-albums-flex .album{
+    width: calc(100% / 4);
+    max-width: 600px;
     padding-right: 5px;
   }
 
 }
 
 
-@media screen and (min-width:992px){
 
-}
-
-
-
-
+/* inizio lg */
 @media screen and (min-width:1200px){
+
+  /* MEDIA QUERY SUPERFLUA */
+  .main-content .box-albums-flex .album{
+    width: calc(100% / 6);
+    max-width: 600px;
+    padding-right: 5px;
+  }
+
 
 }
 
