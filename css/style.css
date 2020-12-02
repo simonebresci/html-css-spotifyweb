@@ -1,26 +1,102 @@
 /* Colori */
+/* Sidebar-sx */
+/* color: #000000; */
+/* Main-top */
+/* color:#080b12; */
+/* Main-content & navbar */
+/* color:#141922; */
+/* Footer player */
+/* color:#282828; */
 
+
+/* RESET PAGINA */
 *{
-  background-color: black;
-  color:white;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+/* /RESET PAGINA */
+
+
 
 
 /* DEBUGG */
 .debug-border{
   border: 1px solid violet;
 }
+
+.debug-border-orange{
+  border:1px solid orange;
+}
+
+
 .debug-bg{
   background-color: violet;
+}
+
+*{
+  color:#777;
+}
+
+
+.container-sito{
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+}
+
+.sidebar-sx, .container-main{
+  height: calc(100vh - 200px); /*Sottrarre altezza fissa footer */
+}
+
+.container-sidebar-main{
+  width: 100%;
+}
+
+.sidebar-sx{
+  width: 15%;
+}
+
+.container-main{
+  width: 85%;
+  overflow-y: auto;
+}
+
+.main-top{
+  height: 50px;
+}
+
+.main-content{
+  height: 2000px;
+}
+
+.player{
+  height: 200px;
 }
 
 /* DEBUGG */
 
 
-/* UTILITIES */
+/* *******  UTILITIES  ***** */
 .container-w100{
   width: 100%;
 }
+
+
+/* FLOAT */
+/* float elemento a sinistra */
+.float-l{
+  float:left;
+}
+
+/* Clearfix per colonne flottanti*/
+.clearfix{
+  content:"";
+  display:table;
+  clear:both;
+}
+
+/* /FLOAT */
 
 .border-radius-5{
   border-radius: 5px;
@@ -32,6 +108,18 @@
 
 .bg-black{
   background-color: #000;
+}
+
+.bg-main-dark{
+  background-color:#080b12;
+}
+
+.bg-main{
+  background-color:#141922;
+}
+
+.bg-grey{
+  background-color:#282828;
 }
 
 .txt-bold{
@@ -106,12 +194,6 @@
   border-left: 1px solid #767695;
 }
 
-
-/* /UTILITIES */
-
-
-
-
 /* Padding custom di 15px */
 .bl-block-h15{
   width: 100%;
@@ -121,3 +203,6 @@
 .bl-pad15{
   padding: 15px;
 }
+
+
+/* *******  UTILITIES  ******** */
