@@ -1,7 +1,7 @@
 /* Colori */
 /* Sidebar-sx */
 /* color: #000000; */
-/* Main-top */
+/* main-top-content */
 /* color:#080b12; */
 /* Main-content & navbar */
 /* color:#141922; */
@@ -54,18 +54,23 @@
 }
 
 
+.sidebar-sx{
+  overflow:hidden;
+}
 
 .container-main{
   /* width: 86%;  */ /* Larghezza definita nelle media query */
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
-.main-top{
+
+.main-top-content{
   height: 100px;
 }
 
 .main-content{
   height: 2000px;
+
 }
 
 .player{
@@ -118,6 +123,10 @@
 
 .bg-grey{
   background-color:#282828;
+}
+
+.bg-transparent{
+  background-color: rga(0,0,0,0);
 }
 
 .txt-bold{
@@ -240,7 +249,9 @@
 
 
 /********* SIDEBAR-SX ***********/
-.sidebar-sx{
+/* NOTA: NON DARE PADDING DIRETTAMENTE SU SIDEBAR-SX PERCHè ALTRIMENTI NON FUNZIONA
+   IL RESPONSIVE IN ALTEZZA! */
+.sidebar-sx-content, .main-top-content, .main-content, .footer-content{
   padding: 15px;
 }
 
@@ -268,8 +279,12 @@
   .sidebar-sx{
     min-width: 40px;
     width: 40px;
+  }
+
+  .sidebar-sx-content, .main-top-content, .main-content, .footer-content{
     padding: 5px;
   }
+
 
   .container-main{
     width: calc(100vw - 40px); /* Sottrai valore sidebar-sx mobile */
@@ -286,18 +301,17 @@
 @media screen and (min-width:768px){
 
   .sidebar-sx{
-    min-width: 200px;
-    width: 14%;
-    overflow: hidden;
+    width: 200px;
+    /* width: 14%; */
+
   }
 
   .container-main{
-    width: 86%;
-    max-width: calc(100vw - 200px);
+    /* width: 85%; */
+    width: calc(100vw - 200px);
   }
 
 }
-
 
 
 @media screen and (min-width:992px){
