@@ -1,0 +1,123 @@
+/* Colori */
+
+*{
+  background-color: black;
+  color:white;
+}
+
+
+/* DEBUGG */
+.debug-border{
+  border: 1px solid violet;
+}
+.debug-bg{
+  background-color: violet;
+}
+
+/* DEBUGG */
+
+
+/* UTILITIES */
+.container-w100{
+  width: 100%;
+}
+
+.border-radius-5{
+  border-radius: 5px;
+}
+
+.bg-white{
+  background-color: #fff;
+}
+
+.bg-black{
+  background-color: #000;
+}
+
+.txt-bold{
+  font-weight: bold;
+}
+
+.btn-shadow-transparent{
+  color: #999;
+  background-color: white;
+  box-shadow: 1px 1px 4px #ccc;
+  border: 0px;
+}
+
+.disabled{
+  opacity: 50%;
+}
+
+
+/* RESET LISTA GENERICO SENZA COLORE*/
+/* .reset-lista ul{
+  list-style: none;
+}
+.reset-lista ul li{
+  text-decoration: none;
+  display: inline;
+  text-transform: capitalize;
+}
+.reset-lista ul li a{
+  text-decoration: none;
+}
+
+.reset-lista ul li a:hover{
+  background-color: rgba(0,0,0,0.1);
+  }
+
+.reset-lista.lista-blue ul li a{
+  color: #031b4e;
+}
+
+.reset-lista.lista-bianco ul li {
+  color:white;
+}
+
+.reset-lista.lista-bianco ul li a{
+  color:#808794;
+}
+
+.reset-lista.lista-credits ul li:first-child{
+  font-weight: bold;
+}
+
+.reset-lista.lista-credits ul li{
+  font-weight: normal;
+}
+
+.reset-lista.lista-credits ul li a:hover{
+  color: #006aff;
+}
+
+.link-bold a{
+  font-weight: bold;
+} */
+
+/* ****RESET LISTA GENERICO SENZA COLORE */
+
+/* .lista-no-bullets ul{
+  list-style: none;
+  padding-left: 5px;
+} */
+
+.border-grey-left{
+  border-left: 1px solid #767695;
+}
+
+
+/* /UTILITIES */
+
+
+
+
+/* Padding custom di 15px */
+.bl-block-h15{
+  width: 100%;
+  height: 15px;
+}
+
+.bl-pad15{
+  padding: 15px;
+}
