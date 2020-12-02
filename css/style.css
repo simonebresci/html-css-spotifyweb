@@ -53,12 +53,10 @@
   width: 100%;
 }
 
-.sidebar-sx{
-  width: 15%;
-}
+
 
 .container-main{
-  width: 85%;
+  /* width: 86%;  */ /* Larghezza definita nelle media query */
   overflow-y: auto;
 }
 
@@ -139,12 +137,11 @@
 
 
 /* RESET LISTA GENERICO SENZA COLORE*/
-/* .reset-lista ul{
+.reset-lista ul{
   list-style: none;
 }
 .reset-lista ul li{
   text-decoration: none;
-  display: inline;
   text-transform: capitalize;
 }
 .reset-lista ul li a{
@@ -179,9 +176,18 @@
   color: #006aff;
 }
 
+.reset-lista.lista-icone-24 ul li a img{
+  width: 24px;
+  height: 24px;
+}
+
+.reset-lista.lista-inline ul li{
+  display: inline-block;
+}
+
 .link-bold a{
   font-weight: bold;
-} */
+}
 
 /* ****RESET LISTA GENERICO SENZA COLORE */
 
@@ -205,4 +211,110 @@
 }
 
 
+/* Classi visibilità */
+.hidden-xs{
+  display: none;
+}
+
+.hidden-sm{
+  display: none;
+}
+
+.hidden-md{
+  display: none;
+}
+
+.hidden-lg{
+  display: none;
+}
+
+
+
+
+/* /Classi visibilità */
+
+
+
+
 /* *******  UTILITIES  ******** */
+
+
+/********* SIDEBAR-SX ***********/
+.sidebar-sx{
+  padding: 15px;
+}
+
+.sidebar-sx .box-logo{
+  width: 100px;
+}
+
+/********* /SIDEBAR-SX ***********/
+
+/* ******* MAIN-CONTENT ******** */
+
+/* Devugg */
+.main-content img{
+  width: 100px;
+}
+/* Devugg */
+
+/* ******* MAIN-CONTENT ******** */
+/* *********** MEDIAQUERY DEVICES ************ */
+/* NOTA: Sviluppo con priorità desktop-first */
+
+/* Device extra small (xs) - max width - 768px */
+@media screen and (max-width:768px){
+
+  .sidebar-sx{
+    min-width: 40px;
+    width: 40px;
+    padding: 5px;
+  }
+
+  .container-main{
+    width: calc(100vw - 40px); /* Sottrai valore sidebar-sx mobile */
+  }
+
+  /* .hidden-xs{
+    display: none;
+  } */
+
+}
+/* Device extra-small (xs) - max width - 768px */
+
+
+@media screen and (min-width:768px){
+
+  .sidebar-sx{
+    min-width: 200px;
+    width: 14%;
+    overflow: hidden;
+  }
+
+  .container-main{
+    width: 86%;
+    max-width: calc(100vw - 200px);
+  }
+
+}
+
+
+
+@media screen and (min-width:992px){
+
+}
+
+
+
+
+@media screen and (min-width:1200px){
+
+}
+
+
+
+
+
+
+
+/* *********** MEDIAQUERY DEVICES ************ */
