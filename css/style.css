@@ -1,12 +1,22 @@
 /* Colori */
 /* Sidebar-sx */
 /* color: #000000; */
-/* main-top-content */
+/* main-top-content-flex */
 /* color:#080b12; */
 /* Main-content & navbar */
 /* color:#141922; */
 /* Footer player */
 /* color:#282828; */
+
+/* Font */
+/* <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+font-family: 'Noto Sans JP', sans-serif; */
+/* /Font */
+
+
+
+/* Mediaquery sbagliate! */
+/* Al primo avvio il layout è spaccato */
 
 
 /* RESET PAGINA */
@@ -25,7 +35,7 @@
   border: 1px solid violet;
 }
 
-.debug-border-orange{
+.debug-border-2{
   border:1px solid orange;
 }
 
@@ -49,6 +59,14 @@
   height: calc(100vh - 100px); /*Sottrarre altezza fissa footer */
 }
 
+.sidebar-sx-content{
+  height: 100%;
+}
+
+.sidebar-sx-content .main-links{
+  height: 300px;
+}
+
 .container-sidebar-main{
   width: 100%;
 }
@@ -58,14 +76,30 @@
   overflow:hidden;
 }
 
+.sidebar-sx .sidebar-profile{
+  height: 50px;
+}
+
+.container-flex-playlist-profile{
+  display: flex;
+  height: calc(100% - 200px); /*150px= altezza logo + links + Playlist title*/
+  flex-direction:column;
+  justify-content: space-between;
+  flex-wrap:nowrap;
+}
+
+
 .container-main{
   /* width: 86%;  */ /* Larghezza definita nelle media query */
   overflow-y: scroll;
 }
 
 
-.main-top-content{
+.main-top-content-flex{
+  display: flex;
+  flex-direction: row-reverse;
   height: 100px;
+  width: 100%;
 }
 
 .main-content{
@@ -92,6 +126,9 @@
   float:left;
 }
 
+.float-r{
+  float:right;
+}
 /* Clearfix per colonne flottanti*/
 .clearfix{
   content:"";
@@ -133,12 +170,36 @@
   font-weight: bold;
 }
 
-.btn-shadow-transparent{
-  color: #999;
-  background-color: white;
-  box-shadow: 1px 1px 4px #ccc;
-  border: 0px;
+.txt-left{
+ text-align: left;
 }
+
+.txt-right{
+ text-align: right;
+}
+
+/* Provvisorio  */
+.btn-transparent{
+  color: white;
+}
+
+.btn-transparent::before{
+  content: "";
+  width: 60px;
+  border-left: 2px solid white;
+  border-radius: 50%;
+
+}
+
+.btn-transparent::after{
+  content: "";
+  width: 60px;
+  border-right: 2px solid white;
+  border-radius: 50%;
+
+}
+
+/* /Provvisorio */
 
 .disabled{
   opacity: 50%;
@@ -251,23 +312,47 @@
 /********* SIDEBAR-SX ***********/
 /* NOTA: NON DARE PADDING DIRETTAMENTE SU SIDEBAR-SX PERCHè ALTRIMENTI NON FUNZIONA
    IL RESPONSIVE IN ALTEZZA! */
-.sidebar-sx-content, .main-top-content, .main-content, .footer-content{
+.sidebar-sx-content, .main-top-content-flex, .main-content, .footer-content{
   padding: 15px;
 }
 
 .sidebar-sx .box-logo{
   width: 100px;
+  height: 50px;
+}
+
+.sidebar-sx .main-links{
+  width: 100px;
+  height: 100px;
+}
+
+.sidebar-sx .sidebar-playlist-create{
+  height: 50px;
+}
+.sidebar-sx .sidebar-playlist{
+  overflow-y: scroll;
 }
 
 /********* /SIDEBAR-SX ***********/
 
 /* ******* MAIN-CONTENT ******** */
 
-/* Devugg */
-.main-content img{
-  width: 100px;
+
+/* .main-content .box-albums-flex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: 200px;
 }
-/* Devugg */
+
+.main-content .box-albums-flex .album{
+  width: 100px;
+} */
+
+.main-content .box-albums-flex .album img{
+  width: 100%;
+}
+
 
 /* ******* MAIN-CONTENT ******** */
 /* *********** MEDIAQUERY DEVICES ************ */
@@ -281,7 +366,7 @@
     width: 40px;
   }
 
-  .sidebar-sx-content, .main-top-content, .main-content, .footer-content{
+  .sidebar-sx-content, .main-top-content-flex, .main-content, .footer-content{
     padding: 5px;
   }
 
