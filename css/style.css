@@ -46,7 +46,7 @@
 }
 
 .sidebar-sx, .container-main{
-  height: calc(100vh - 200px); /*Sottrarre altezza fissa footer */
+  height: calc(100vh - 100px); /*Sottrarre altezza fissa footer */
 }
 
 .container-sidebar-main{
@@ -63,7 +63,7 @@
 }
 
 .main-top{
-  height: 50px;
+  height: 100px;
 }
 
 .main-content{
@@ -71,7 +71,7 @@
 }
 
 .player{
-  height: 200px;
+  height: 100px;
 }
 
 /* DEBUGG */
