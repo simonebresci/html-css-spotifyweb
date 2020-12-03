@@ -51,10 +51,11 @@ font-family: 'Noto Sans JP', sans-serif; */
 
 .container-sito{
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 100px);
   max-width: 100%;
 }
 
+/* Superfluo? */
 .sidebar-sx, .container-main{
   height: calc(100vh - 100px); /*Sottrarre altezza fissa footer */
 }
@@ -77,7 +78,7 @@ font-family: 'Noto Sans JP', sans-serif; */
 }
 
 .sidebar-sx .sidebar-profile{
-  height: 50px;
+  height: 100px;
 }
 
 .container-flex-playlist-profile{
@@ -90,7 +91,7 @@ font-family: 'Noto Sans JP', sans-serif; */
 
 
 .container-main{
-  /* width: 86%;  */ /* Larghezza definita nelle media query */
+  width: calc(100% - 200px); /* Larghezza definita nelle media query */
   overflow-y: scroll;
 }
 
@@ -104,6 +105,7 @@ font-family: 'Noto Sans JP', sans-serif; */
 
 .main-content{
   height: 2000px;
+  width: 100%;
 
 }
 
@@ -383,9 +385,9 @@ font-family: 'Noto Sans JP', sans-serif; */
   }
 
 
-  .container-main{
-    width: calc(100vw - 40px); /* Sottrai valore sidebar-sx mobile */
-  }
+  /* .container-main{
+    width: calc(100vw - 40px);
+  } */
 
   /* .hidden-xs{
     display: none;
@@ -409,10 +411,10 @@ font-family: 'Noto Sans JP', sans-serif; */
 
   }
 
-  .container-main{
-    /* width: 85%; */
+  /* .container-main{
+
     width: calc(100vw - 200px);
-  }
+  } */
 
   .main-content .box-albums-flex .album{
     width: calc(100% / 2);
