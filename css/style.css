@@ -106,7 +106,6 @@ font-family: 'Noto Sans JP', sans-serif; */
 }
 
 .main-content{
-  height: 2000px;
   width: 100%;
 
 }
@@ -378,6 +377,12 @@ footer{
   display: flex;
   justify-content: space-between;
 }
+
+.player-box-left, .player-box-center, .player-box-right{
+  width: 400px;
+  height: 70px;;
+}
+
 /* ********** /FOOTER CONTENT ************ */
 
 
