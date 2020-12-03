@@ -44,7 +44,8 @@ font-family: 'Noto Sans JP', sans-serif; */
   background-color: violet;
 }
 
-*{
+.sidebar-sx, .main-content{
+  /* Colore default testo */
   color:#777;
 }
 
@@ -416,6 +417,7 @@ footer{
 }
 
 .player-box-left, .player-box-center, .player-box-right{
+  color:white;
   width: 400px;
   height: 70px;;
 }
