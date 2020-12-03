@@ -338,12 +338,42 @@ footer{
   min-height: 50px;
   max-height: 300px;
   overflow-y: auto;
-  background-color: red;
+}
+
+.sidebar-sx .sidebar-profile ul li:first-child{
+  border-bottom: 1px solid white;
 }
 
 /********* /SIDEBAR-SX ***********/
 
+
+
+
 /* ******* MAIN-CONTENT ******** */
+
+
+/* NAVBAR */
+.main-navbar-flex{
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+}
+
+.main-navbar-flex div{
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+/* /NAVBAR */
+
+
+.main-content h2{
+  color: white;
+  padding-bottom:5px;
+}
+
+.main-content h3{
+  padding-bottom:15px;
+}
 
 
 .main-content .box-albums-flex{
@@ -359,8 +389,19 @@ footer{
   margin-right: 15px;
 }
 
+.box-albums-flex .album .title{
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0;
+}
 
-.main-content .box-albums-flex .album img{
+.box-albums-flex .album .author{
+  font-size: 14px;
+
+}
+
+.box-albums-flex .album img{
   width: 100%;
 }
 
