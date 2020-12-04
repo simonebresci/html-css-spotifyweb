@@ -288,30 +288,6 @@ footer{
 }
 
 
-/* Classi visibilità */
-.hidden-xs{
-  display: none;
-}
-
-.hidden-sm{
-  display: none;
-}
-
-.hidden-md{
-  display: none;
-}
-
-.hidden-lg{
-  display: none;
-}
-
-
-
-
-/* /Classi visibilità */
-
-
-
 
 /* *******  UTILITIES  ******** */
 
@@ -328,8 +304,12 @@ footer{
 }
 
 .sidebar-sx .box-logo{
-  width: 100px;
+  width: 100%;
   height: 50px;
+}
+
+.sidebar-sx .box-logo img{
+  width: 100%;
 }
 
 .sidebar-sx .main-links{
@@ -439,6 +419,45 @@ footer{
 /* MEDIA- QUERY DA RISCRIVERE AL CONTRARIO */
 
 
+/* Classi visibilità */
+
+/* HIDDEN */
+.my-hidden-lg{
+  display: none;
+}
+/* /HIDDEN */
+
+/* ONLY visible */
+.my-only-visible-lg{
+  display: unset;
+}
+.my-only-visible-md{
+  display: none;
+}
+.my-only-visible-sm{
+  display: none;
+}
+.my-only-visible-xs{
+  display: none;
+}
+/* /ONLY visible */
+
+/* VISIBLE */
+.my-visible-lg{
+  display: unset;
+}
+.my-visible-md{
+  display: unset;
+}
+.my-visible-sm{
+  display: unset;
+}
+.my-visible-xs{
+  display: unset;
+}
+/* /VISIBLE */
+/* /Classi visibilità */
+
 /* Debug help */
 .container-sito::before{
   position: absolute;
@@ -449,6 +468,44 @@ footer{
 
 /* inizio md */
 @media screen and (max-width:991px){
+  /* CLASSI VISIBILITA' */
+
+  /* HIDDEN */
+  .my-hidden-md{
+    display: none;
+  }
+  /* /HIDDEN */
+
+  /* ONLY visible */
+  .my-only-visible-lg{
+    display: none;
+  }
+  .my-only-visible-md{
+    display: unset;
+  }
+  .my-only-visible-sm{
+    display: none;
+  }
+  .my-only-visible-xs{
+    display: none;
+  }
+  /* /ONLY visible */
+
+  /* VISIBLE */
+  .my-visible-lg{
+    display: none;
+  }
+  .my-visible-md{
+    display: unset;
+  }
+  .my-visible-sm{
+    display: unset;
+  }
+  .my-visible-xs{
+    display: unset;
+  }
+  /* /VISIBLE */
+  /* /CLASSI VISIBILITA' */
 
   /* MEDIA QUERY SUPERFLUA */
   .main-content .box-albums-flex .album{
@@ -470,6 +527,44 @@ footer{
 
 /* inizio sm */
 @media screen and (max-width:767px){
+  /* CLASSI VISIBILITA' */
+
+  /* HIDDEN */
+  .my-hidden-sm{
+    display: none;
+  }
+  /* /HIDDEN */
+
+  /* ONLY visible */
+  .my-only-visible-lg{
+    display: none;
+  }
+  .my-only-visible-md{
+    display: none;
+  }
+  .my-only-visible-sm{
+    display: unset;
+  }
+  .my-only-visible-xs{
+    display: none;
+  }
+  /* /ONLY visible */
+
+  /* VISIBLE */
+  .my-visible-lg{
+    display: none;
+  }
+  .my-visible-md{
+    display: none;
+  }
+  .my-visible-sm{
+    display: unset;
+  }
+  .my-visible-xs{
+    display: unset;
+  }
+  /* /VISIBLE */
+  /* /CLASSI VISIBILITA' */
 
   .main-content .box-albums-flex .album{
     width: calc(100% / 4);
@@ -491,9 +586,51 @@ footer{
 /* inizio xs */
 @media screen and (max-width:575px){
 
+  /* CLASSI VISIBILITA' */
+  /* HIDDEN */
+  .my-hidden-xs{
+    display: none;
+  }
+  /* /HIDDEN */
+
+  /* ONLY visible */
+  .my-only-visible-lg{
+    display: none;
+  }
+  .my-only-visible-md{
+    display: none;
+  }
+  .my-only-visible-sm{
+    display: none;
+  }
+  .my-only-visible-xs{
+    display: unset;
+  }
+  /* /ONLY visible */
+
+  /* VISIBLE */
+  .my-visible-lg{
+    display: none;
+  }
+  .my-visible-md{
+    display: none;
+  }
+  .my-visible-sm{
+    display: none;
+  }
+  .my-visible-xs{
+    display: unset;
+  }
+  /* /VISIBLE */
+  /* /CLASSI VISIBILITA' */
+
   .sidebar-sx{
     min-width: 40px;
     width: 40px;
+  }
+
+  .sidebar-sx .sidebar-profile ul li:first-child{
+    border-bottom: 0;
   }
 
   .container-main, .main-top-content-fixed{

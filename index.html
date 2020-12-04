@@ -25,16 +25,19 @@
 
               <!-- Logo sito -->
               <div class="box-logo">
-                  <img src="./img/loghi/logo.svg" alt="Logo Spotify piccolo">
+                  <!-- Logo big  -->
+                  <img class="my-hidden-xs" src="./img/loghi/logo.svg" alt="Logo Spotify grande">
+                  <!-- Logo small -->
+                  <img class="my-only-visible-xs" src="./img/loghi/logo-small.svg" alt="Logo Spotify piccolo">
               </div>
               <!-- /Logo sito -->
 
               <!-- Link principali sito-->
               <div class="main-links reset-lista lista-icone-24">
                 <ul>
-                  <li><a href=""><img src="./img/sidebar/home.svg" alt="Icona home"><span class="hidden-xs">Home</span></a></li>
-                  <li><a href=""><img src="./img/sidebar/search.svg" alt="Icona search"><span class="hidden-xs">Cerca</a></span></li>
-                  <li><a href=""><img src="./img/sidebar/libreria.svg" alt="Icona libreria"><span class="hidden-xs">La tua libreria</a></span></li>
+                  <li><a href=""><img src="./img/sidebar/home.svg" alt="Icona home"><span class="my-hidden-xs">Home</span></a></li>
+                  <li><a href=""><img src="./img/sidebar/search.svg" alt="Icona search"><span class="my-hidden-xs">Cerca</a></span></li>
+                  <li><a href=""><img src="./img/sidebar/libreria.svg" alt="Icona libreria"><span class="my-hidden-xs">La tua libreria</a></span></li>
                 </ul>
 
               </div>
@@ -42,7 +45,7 @@
 
 
                 <!-- Playlist -->
-                <div class="sidebar-playlist reset-lista">
+                <div class="sidebar-playlist reset-lista my-hidden-xs">
                   <ul>
                       <li>PLAYLIST</li>
                       <li><button type="button" name="button">+</button> Crea playlist</li>
@@ -72,8 +75,8 @@
             <div class="sidebar-sx-content">
               <div class="sidebar-profile reset-lista">
                 <ul>
-                  <li><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>Installa app</li>
-                  <li><i class="fa fa-user" aria-hidden="true"></i>John Doe</li>
+                  <li><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i><span class="my-visible-sm">Installa app</span></li>
+                  <li><i class="fa fa-user" aria-hidden="true"></i><span class="my-visible-sm">John Doe</span></li>
                 </ul>
               </div>
             </div>
