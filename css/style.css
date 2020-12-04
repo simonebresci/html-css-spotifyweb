@@ -107,6 +107,8 @@ font-family: 'Noto Sans JP', sans-serif; */
 
 footer{
   height: 100px;
+  width: 100vw;
+  max-width: 100%;
 }
 
 
@@ -340,6 +342,7 @@ footer{
 /* NAVBAR */
 .main-navbar-flex{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 15px 0;
 }
