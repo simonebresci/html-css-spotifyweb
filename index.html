@@ -35,9 +35,10 @@
               <!-- Link principali sito-->
               <div class="main-links reset-lista lista-icone-24 ">
                 <ul>
+                  <!-- My-hidden-xs non funziona perchè in conflitto con reset-lista -->
                   <li><a class="link-style1" href=""><img src="./img/sidebar/home.svg" alt="Icona home"><span class="my-hidden-xs">Home</span></a></li>
-                  <li><a class="link-style1"href=""><img src="./img/sidebar/search.svg" alt="Icona search"><span class="my-hidden-xs">Cerca</a></span></li>
-                  <li><a class="link-style1" href=""><img src="./img/sidebar/libreria.svg" alt="Icona libreria"><span class="my-hidden-xs">La tua libreria</a></span></li>
+                  <li><a class="link-style1"href=""><img src="./img/sidebar/search.svg" alt="Icona search"><span class="my-hidden-xs">Cerca</span></a></li>
+                  <li><a class="link-style1" href=""><img src="./img/sidebar/libreria.svg" alt="Icona libreria"><span class="my-hidden-xs">La tua libreria</span></a></li>
                 </ul>
 
               </div>
@@ -46,23 +47,14 @@
 
                 <!-- Playlist -->
                 <div class="sidebar-playlist reset-lista my-hidden-xs">
-                  <ul>
+                  <ul class="link-style1-all">
                       <li>PLAYLIST</li>
-                      <li><button type="button" name="button">+</button> Crea playlist</li>
-                      <li>Nome playlist1</li>
-                      <li>Nome playlist2</li>
-                      <li>Nome playlist3</li>
-                      <li>Nome playlist4</li>
-                      <li>Nome playlist5</li>
-                      <li>Nome playlist6</li>
-                      <li>Nome playlist7</li>
-                      <li>Nome playlist8</li>
-                      <li>Nome playlist9</li>
-                      <li>Nome playlist10</li>
-                      <li>Nome playlist11</li>
-                      <li>Nome playlist12</li>
-                      <li>Nome playlist13</li>
-                      <li>Nome playlist14</li>
+                      <li><a href=""><div class="bg-icon-36-grey"><i class="fa fa-plus" aria-hidden="true"></i></div><span> Crea playlist</span></a></li>
+                      <li><a href="">Nome playlist1</a></li>
+                      <li><a href="">Nome playlist2</a></li>
+                      <li><a href="">Nome playlist3</a></li>
+                      <li><a href="">Nome playlist4</a></li>
+
                   </ul>
                 </div>
                 <!-- /Playlist -->
@@ -74,9 +66,9 @@
             <!-- Profile -->
             <div class="sidebar-sx-content">
               <div class="sidebar-profile reset-lista">
-                <ul>
-                  <li><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i><span class="my-visible-sm">Installa app</span></li>
-                  <li><i class="fa fa-user" aria-hidden="true"></i><span class="my-visible-sm">John Doe</span></li>
+                <ul class="link-style1-all">
+                  <li class="install-app"><a href=""><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i><span class="my-visible-sm">Installa app</span></a></li>
+                  <li class="account"><a href=""><i class="fa fa-user-circle-o" aria-hidden="true"></i><span class="my-visible-sm">John Doe</span></a></li>
                 </ul>
               </div>
             </div>

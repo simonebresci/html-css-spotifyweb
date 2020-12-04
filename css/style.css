@@ -69,7 +69,7 @@ font-family: 'Noto Sans JP', sans-serif; */
 
 /* Superfluo? */
 .sidebar-sx, .container-main{
-  height: calc(100vh - 100px); /*Sottrarre altezza fissa footer */
+  height: calc(100vh - 90px); /*Sottrarre altezza fissa footer */
 }
 
 .sidebar-sx-content:first-child{
@@ -80,12 +80,31 @@ font-family: 'Noto Sans JP', sans-serif; */
 
 .main-links{
   height: 300px;
+  margin-bottom:30px;
+}
+
+.main-links ul li{
+  margin-bottom: 10px;
 }
 
 .main-links ul li span{
   display: inline-block;
   line-height: 24px; /* altezza pari ad altezza icona */
 }
+
+
+.main-links ul li:first-child::before{
+  position: relative;
+  content:"";
+  display: inline-block;
+  top:15px;
+  left:-15px;
+  height: 35px;
+  border: 2px solid #adff2f;
+
+}
+
+
 
 .main-links ul li img{
   /* Allineamento rispetto al testo lista */
@@ -110,6 +129,23 @@ font-family: 'Noto Sans JP', sans-serif; */
   height: 70px; /* 100px -30px padding */
 }
 
+.sidebar-sx .sidebar-profile ul li{
+  padding: 10px 0;
+}
+
+.sidebar-sx .sidebar-profile ul li i{
+  margin-right: 10px;
+}
+
+.sidebar-sx .sidebar-profile .install-app{
+  border-bottom: 2px solid #777;
+}
+
+.sidebar-sx .sidebar-profile .account a{
+  color:white;
+  font-weight: bold;
+}
+
 
 .container-main{
   width: calc(100% - 230px); /* Larghezza definita nelle media query */
@@ -131,7 +167,7 @@ font-family: 'Noto Sans JP', sans-serif; */
 }
 
 footer{
-  height: 100px;
+  height: 90px;
   width: 100vw;
   max-width: 100%;
 }
@@ -240,17 +276,20 @@ footer{
 }
 
 /* LINK PERSONALIZZAZIONE */
-.link-style1{
+.link-style1, .link-style1-all a{
   color:#777;
   text-decoration: none;
   font-weight: bold;
 }
-.link-style1:hover{
+.link-style1:hover, .link-style1-all a:hover{
   color:white;
   text-shadow: 0px 0px 5px rgba(0,0,0,0.4);
   border-radius: 5px;
   text-decoration: none;
 }
+
+
+
 /* LINK PERSONALIZZAZIONE */
 
 
@@ -328,6 +367,18 @@ footer{
   padding: 15px;
 }
 
+.bg-icon-36-grey{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  background-color: #a3a3a3;
+  color:black;
+
+}
+
+
 
 
 /* *******  UTILITIES  ******** */
@@ -362,13 +413,25 @@ footer{
 .sidebar-sx .sidebar-playlist{
   height: calc(100% - 150px); /* Sottrai logo e box-playlist */
   min-height: 50px;
-  max-height: 300px;
+  max-height: 500px;
   overflow-y: auto;
+  /* TODO: scroll dimensioni giuste */
 }
 
-.sidebar-sx .sidebar-profile ul li:first-child{
-  border-bottom: 1px solid white;
+.sidebar-sx .sidebar-playlist ul li:first-child{
+  color:white;
+  font-weight: bold;
 }
+
+.sidebar-sx .sidebar-playlist ul li{
+  margin-bottom: 25px;
+}
+
+.sidebar-sx .sidebar-playlist [class*="icon"]{
+  margin-right: 5px;
+}
+
+
 
 /********* /SIDEBAR-SX ***********/
 
@@ -465,7 +528,7 @@ footer{
 
 /* HIDDEN */
 .my-hidden-lg{
-  display: none;
+  display: none !important;;
 }
 /* /HIDDEN */
 
@@ -514,7 +577,7 @@ footer{
 
   /* HIDDEN */
   .my-hidden-md{
-    display: none;
+    display: none !important;;
   }
   /* /HIDDEN */
 
@@ -573,7 +636,7 @@ footer{
 
   /* HIDDEN */
   .my-hidden-sm{
-    display: none;
+    display: none !important;;
   }
   /* /HIDDEN */
 
@@ -631,7 +694,7 @@ footer{
   /* CLASSI VISIBILITA' */
   /* HIDDEN */
   .my-hidden-xs{
-    display: none;
+    display: none !important;
   }
   /* /HIDDEN */
 
@@ -670,6 +733,7 @@ footer{
     /* min-width: 40px; */
     width: 40px;
   }
+
 
   .sidebar-sx .sidebar-profile ul li:first-child{
     border-bottom: 0;
