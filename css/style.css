@@ -319,6 +319,10 @@ footer{
 /********* SIDEBAR-SX ***********/
 /* NOTA: NON DARE PADDING DIRETTAMENTE SU SIDEBAR-SX PERCHè ALTRIMENTI NON FUNZIONA
    IL RESPONSIVE IN ALTEZZA! */
+.sidebar-sx{
+  width: 200px;
+}
+
 .sidebar-sx-content, .main-top-content-fixed, .main-content, .footer-content-flex{
   padding: 15px;
 }
@@ -434,75 +438,17 @@ footer{
 /* NOTA: Sviluppo con priorità desktop-first */
 /* MEDIA- QUERY DA RISCRIVERE AL CONTRARIO */
 
-/* Device extra small (xs) - max width - 768px */
-@media screen and (max-width:768px){
 
-  .sidebar-sx{
-    min-width: 40px;
-    width: 40px;
-  }
-
-  .sidebar-sx-content, .main-top-content-fixed, .main-content, .footer-content-flex{
-    padding: 5px;
-  }
-
-
-  /* .container-main{
-    width: calc(100vw - 40px);
-  } */
-
-  /* .hidden-xs{
-    display: none;
-  } */
-
-  .main-content .box-albums-flex .album{
-    width: calc(100% / 2);
-    max-width: 350px;
-    padding-right: 5px;
-  }
-
-}
-/* Device extra-small (xs) - max width - 768px */
-
-/* inizio sm */
-@media screen and (min-width:768px){
-
-  .sidebar-sx{
-    width: 200px;
-    /* width: 14%; */
-
-  }
-
-  /* .container-main{
-
-    width: calc(100vw - 200px);
-  } */
-
-  .main-content .box-albums-flex .album{
-    width: calc(100% / 2);
-    max-width: 500px;
-    padding-right: 5px;
-  }
-
-
-
+/* Debug help */
+.container-sito::before{
+  position: absolute;
+  display: block;
+  color: violet;
+  content: "lg";
 }
 
 /* inizio md */
-@media screen and (min-width:992px){
-
-  .main-content .box-albums-flex .album{
-    width: calc(100% / 4);
-    max-width: 500px;
-    padding-right: 5px;
-  }
-
-}
-
-
-
-/* inizio lg */
-@media screen and (min-width:1200px){
+@media screen and (max-width:991px){
 
   /* MEDIA QUERY SUPERFLUA */
   .main-content .box-albums-flex .album{
@@ -511,8 +457,79 @@ footer{
     padding-right: 5px;
   }
 
+  /* Debug help */
+  .container-sito::before{
+    position: absolute;
+    display: block;
+    color: violet;
+    content: "md";
+  }
+
 
 }
+
+/* inizio sm */
+@media screen and (max-width:767px){
+
+  .main-content .box-albums-flex .album{
+    width: calc(100% / 4);
+    max-width: 500px;
+    padding-right: 5px;
+  }
+
+  /* Debug help */
+  .container-sito::before{
+    position: absolute;
+    display: block;
+    content: "sm";
+    color: violet;
+  }
+
+}
+
+
+/* inizio xs */
+@media screen and (max-width:575px){
+
+  .sidebar-sx{
+    min-width: 40px;
+    width: 40px;
+  }
+
+  .container-main, .main-top-content-fixed{
+    width: calc(100% - 40px);
+  }
+
+
+
+
+  /* Debug help */
+  .container-sito::before{
+    position: absolute;
+    display: block;
+    content: "xs";
+    color: violet;
+  }
+
+
+  /* .container-main{
+
+    width: calc(100vw - 200px);
+  } */
+
+  .sidebar-sx-content, .main-top-content-fixed, .main-content, .footer-content-flex{
+    padding: 5px;
+  }
+
+  .main-content .box-albums-flex .album{
+    width: calc(100% / 2);
+    max-width: 500px;
+    padding-right: 5px;
+  }
+
+}
+
+
 
 
 
