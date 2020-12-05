@@ -158,7 +158,7 @@
   position: fixed;
   height: 90px;
   width: calc(100% - 230px);
-  text-align:right;
+
 }
 
 .main-content{
@@ -259,9 +259,15 @@ footer{
 
 /* Provvisorio  */
 .btn-transparent{
+  position: relative;
+  bottom: 2px;
   color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
 }
 
+/*
 .btn-transparent::before{
   content: "";
   width: 60px;
@@ -276,7 +282,7 @@ footer{
   border-right: 2px solid white;
   border-radius: 50%;
 
-}
+} */
 
 /* /Provvisorio */
 
@@ -460,7 +466,55 @@ footer{
 
 /********* /SIDEBAR-SX ***********/
 
+/* ******* MAIN-TOP-CONTENT-FIXED ******** */
 
+/* Centra bottone */
+.btn-container {
+  margin-top: 5px;
+}
+
+/* Animazione bottone "Effettua upgrade" */
+.btn-container:hover .btn-left, .btn-container:hover .btn-center, .btn-container:hover .btn-right {
+  transform: scale(1.1);
+}
+
+
+.main-top-content-fixed .btn-left, .main-top-content-fixed .btn-right{
+  display: inline-block;
+  content: " ";
+  height: 40px;
+  width: 30px;
+  border: 1px solid white;
+  color: #080b12;
+}
+
+.main-top-content-fixed .btn-left{
+
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  transform: translate(+50%);
+  border-right: 0px;
+  line-height: 40px;
+}
+
+.main-top-content-fixed .btn-right{
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  transform: translate(-50%);
+  border-left: 0px;
+  line-height: 40px;
+}
+
+.main-top-content-fixed .btn-center{
+  display: inline-block;
+  height: 40px;
+  width: 200px;
+  line-height: 40px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+/* ******* MAIN-TOP-CONTENT-FIXED ******** */
 
 
 /* ******* MAIN-CONTENT ******** */
@@ -478,6 +532,17 @@ footer{
   padding-right: 15px;
   text-transform: uppercase;
 }
+
+/* .main-navbar div:first-child::before{
+  position: relative;
+  content:"";
+  display: inline-block;
+  top:15px;
+  left:-11px;
+  height: 35px;
+  border: 2px solid #adff2f;
+
+} */
 /* /NAVBAR */
 
 
