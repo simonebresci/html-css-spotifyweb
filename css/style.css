@@ -201,6 +201,10 @@ footer{
 
 /* /FLOAT */
 
+.display-none{
+  display: none;
+}
+
 .scale1-2{
   transform: scale(1.2);
 }
@@ -528,31 +532,41 @@ footer{
   padding: 15px 0;
 }
 
-.main-navbar-flex div{
+.main-navbar-flex li{
   padding-right: 15px;
+}
+
+.main-navbar-flex li a{
   text-transform: uppercase;
 }
 
-/* .main-navbar div:first-child::before{
+.main-navbar-flex li:first-child::after{
   position: relative;
   content:"";
   display: inline-block;
-  top:15px;
-  left:-11px;
-  height: 35px;
+  bottom:5px;
+  transform: translate(-50%);
+  left:50%;
+  height: 0px;
+  width: 25%;
   border: 2px solid #adff2f;
 
-} */
+}
 /* /NAVBAR */
 
+.main-content section{
+  margin-bottom: 30px;
+}
 
 .main-content h2{
+  font-size: 18px;
   color: white;
-  padding-bottom:5px;
+  padding-bottom:10px;
 }
 
 .main-content h3{
-  padding-bottom:15px;
+  font-size: 12px;
+  padding-bottom:25px;
 }
 
 
@@ -571,13 +585,14 @@ footer{
 
 .box-albums-flex .album .title{
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   padding: 10px 0;
 }
 
 .box-albums-flex .album .author{
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: bold;
 
 }
 
