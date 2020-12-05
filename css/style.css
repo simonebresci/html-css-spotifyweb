@@ -158,7 +158,7 @@
   position: fixed;
   height: 90px;
   width: calc(100% - 230px);
-
+  z-index: 999;
 }
 
 .main-content{
@@ -638,9 +638,9 @@ footer{
 
 .box-albums-flex .album .img-container .overlay-bg{
   position: absolute;
-  top:0;
+  top:0px;
   left:0;
-  height: 100%;
+  height: calc(100% - 4px);
   width: 100%;
   background-color: rgba(0,0,0,0);
   color: rgba(0,0,0,0);
@@ -686,7 +686,7 @@ footer{
 .player-box-left, .player-box-center, .player-box-right{
   color:white;
   width: 400px;
-  height: 70px;;
+  height: 60px;
 }
 
 /* ********** /FOOTER CONTENT ************ */
@@ -951,13 +951,13 @@ footer{
 
 
 }
-
-
-
-
-
-
-
-
-
 /* *********** MEDIAQUERY DEVICES ************ */
+
+/* *********** MEDIAQUERY HEIGHT ************* */
+@media screen and (max-height:190px){
+  .main-top-content-fixed{
+    display: none;
+  }
+}
+
+/* *********** /MEDIAQUERY HEIGHT ************* */
