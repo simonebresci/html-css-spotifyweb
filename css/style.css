@@ -559,7 +559,7 @@ footer{
 }
 
 .main-content h2{
-  font-size: 18px;
+  font-size: 24px;
   color: white;
   padding-bottom:10px;
 }
@@ -577,11 +577,21 @@ footer{
   /* justify-content: space-between; */
 }
 
+
+
 .main-content .box-albums-flex .album{
-  width: calc(100% / 6);
-  max-width: 150px;
+  width: calc((100% / 6) - (15px / 6) * 5); /* Nota: un margine ogni sei non deve essere conteggiato */
+  /* max-width: 150px; */
   margin-right: 15px;
 }
+
+/* Elimina margine sugli elementi che chiudono la riga */
+.main-content .box-albums-flex .album:nth-child(6n){
+  margin-right:0px;
+}
+
+
+
 
 .box-albums-flex .album .title{
   color: white;
@@ -598,6 +608,10 @@ footer{
 
 .box-albums-flex .album img{
   width: 100%;
+}
+
+.box-albums-flex.box-circle .album img{
+  border-radius: 50%;
 }
 
 
@@ -717,12 +731,15 @@ footer{
   /* /VISIBLE */
   /* /CLASSI VISIBILITA' */
 
-  /* MEDIA QUERY SUPERFLUA */
   .main-content .box-albums-flex .album{
-    width: calc(100% / 6);
-    max-width: 200px;
-    padding-right: 5px;
+    width: calc((100% / 4) - (15px / 4) * 3); /* Nota: un margine ogni quattro non deve essere conteggiato */
+    /* max-width: 150px; */
+    margin-right: 15px;
   }
+  .main-content .box-albums-flex .album:nth-child(4n){
+    margin-right: 0px;
+  }
+
 
   /* Debug help */
   .container-sito::before{
@@ -777,9 +794,12 @@ footer{
   /* /CLASSI VISIBILITA' */
 
   .main-content .box-albums-flex .album{
-    width: calc(100% / 4);
-    max-width: 500px;
-    padding-right: 5px;
+    width: calc((100% / 2) - (15px / 2) * 1); /* Nota: un margine ogni quattro non deve essere conteggiato */
+    /* max-width: 150px; */
+    margin-right: 15px;
+  }
+  .main-content .box-albums-flex .album:nth-child(2n){
+    margin-right: 0px;
   }
 
   /* Debug help */
@@ -869,11 +889,7 @@ footer{
     padding: 5px;
   }
 
-  .main-content .box-albums-flex .album{
-    width: calc(100% / 2);
-    max-width: 500px;
-    padding-right: 5px;
-  }
+
 
 }
 
