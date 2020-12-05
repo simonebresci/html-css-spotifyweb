@@ -915,18 +915,49 @@ footer{
 
   .sidebar-sx{
     /* min-width: 40px; */
-    width: 40px;
+    width: 50px;
   }
 
+  .sidebar-sx-content{
+    text-align: center;
+  }
 
-  .sidebar-sx .sidebar-profile ul li:first-child{
+  .sidebar-sx-content .box-logo{
+    height: 50px;
+  }
+
+  .sidebar-sx-content .main-links img{
+    margin-right: 0;
+  }
+
+  .sidebar-sx .sidebar-profile ul li{
     border-bottom: 0;
+    margin: 0px;
+  }
+
+  .sidebar-sx .sidebar-profile .install-app i, .sidebar-sx .sidebar-profile .account i{
+    text-align: center;
+    margin-right: 0;
   }
 
   .container-main, .main-top-content-fixed{
-    width: calc(100% - 40px);
+    width: calc(100% - 50px);
   }
 
+  .sidebar-sx .box-logo img{
+    width: 30px;
+  }
+
+  .main-links ul li:first-child::before{
+    display: none;
+    top:0;
+    left: 0;
+  }
+
+  .main-links ul li:first-child {
+    top:0;
+    left:0;
+  }
 
 
 
@@ -945,7 +976,7 @@ footer{
   } */
 
   .sidebar-sx-content, .main-top-content-fixed, .main-content, .footer-content-flex{
-    padding: 5px;
+    padding: 10px;
   }
 
 
