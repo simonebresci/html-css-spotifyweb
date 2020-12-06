@@ -117,6 +117,7 @@
 
 .container-sidebar-main{
   width: 100%;
+  min-width: 480px;
 }
 
 
@@ -367,8 +368,10 @@ footer{
 
 /* Animazione alternativa su icone */
 .link-style1:hover img{
-  box-shadow: 0px 0px 30px rgba(173,255,47,0.5);
-  border-radius: 5px;
+  background-color: rgba(173,255,47,0.5);
+  box-shadow: 0px 0px 30px rgba(173,255,47,0.7);
+  border-radius: 50%;
+
 }
 
 .link-style1-all .bg-icon-36-grey:hover{
@@ -1047,12 +1050,12 @@ footer{
 /* /Classi visibilità */
 
 /* Debug help */
-.container-sito::before{
+/* .container-sito::before{
   position: absolute;
   display: block;
   color: violet;
   content: "lg";
-}
+} */
 
 /* inizio md */
 @media screen and (max-width:991px){
@@ -1106,12 +1109,12 @@ footer{
 
 
   /* Debug help */
-  .container-sito::before{
+  /* .container-sito::before{
     position: absolute;
     display: block;
     color: violet;
     content: "md";
-  }
+  } */
 
 
 }
@@ -1179,12 +1182,12 @@ footer{
   }
 
   /* Debug help */
-  .container-sito::before{
+  /* .container-sito::before{
     position: absolute;
     display: block;
     content: "sm";
     color: violet;
-  }
+  } */
 
 }
 
@@ -1259,7 +1262,7 @@ footer{
 
   .container-main, .main-top-content-fixed{
     width: calc(100% - 50px);
-    /* min-width: 430px; /* 430 valore corretto */ */
+    /* min-width: 430px; /* 430 valore corretto */
   }
 
   .sidebar-sx .box-logo img{
@@ -1280,12 +1283,12 @@ footer{
 
 
   /* Debug help */
-  .container-sito::before{
+  /* .container-sito::before{
     position: absolute;
     display: block;
     content: "xs";
     color: violet;
-  }
+  } */
 
 
   /* .container-main{
