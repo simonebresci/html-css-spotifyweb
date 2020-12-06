@@ -171,6 +171,7 @@ footer{
   height: 90px;
   width: 100vw;
   max-width: 100%;
+  min-width: 480px;
 }
 
 
@@ -756,7 +757,7 @@ footer{
 
 
 .player-box-center .play-button{
-  padding: 0px 10px;
+  padding: 0px 8px;
 }
 
 .player-box-center .ico-play-buttons li:hover{
@@ -815,7 +816,7 @@ footer{
 
 
 .player-box-right  .options .bar{
-  width: 50%;
+  width: 35%;
 }
 
 .player-box-right .options{
@@ -846,7 +847,7 @@ footer{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-width: 80px;
+  min-width: 70px;
   width: 50%;
   max-width:110px;
   font-size: 12px;
@@ -1154,6 +1155,7 @@ footer{
 
   .container-main, .main-top-content-fixed{
     width: calc(100% - 50px);
+    /* min-width: 430px; /* 430 valore corretto */ */
   }
 
   .sidebar-sx .box-logo img{
