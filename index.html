@@ -283,21 +283,54 @@
         <!-- Footer player -->
         <footer class="bg-grey">
           <div class="footer-content-flex">
-            <div class="player-box-left">
-              <i class="fa fa-heart-o" aria-hidden="true"></i>
-              <i class="fa fa-folder-o" aria-hidden="true"></i>
+            <div class="player-box-left flex-mar5 debug-border">
+              <!-- Mix Daily -->
+              <!-- <div class="album txt-center"> -->
+                <div class="img-container debug-border-2">
+                  <img src="./img/albums/mixdaily.jpeg" alt="Immagine album">
+                </div>
+                <div class="txt-current-song debug-border-2">
+                  <div class="">
+                      <p class="title">Daily Mix 1</p>
+                  </div>
+                  <div class="">
+                      <p class="author">Subtitle</p>
+                  </div>
+                  <div class="">
+                      <p class="name">Nome</p>
+                  </div>
+
+                </div>
+              <!-- </div> -->
+              <!-- /Mix Daily -->
+              <div class="ico-current-song debug-border-2">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                <i class="fa fa-folder-o" aria-hidden="true"></i>
+              </div>
             </div>
-            <div class="player-box-center">
-              <i class="fa fa-random" aria-hidden="true"></i>
-              <i class="fa fa-step-backward" aria-hidden="true"></i>
-              <i class="fa fa-play-circle-o" aria-hidden="true"></i>
-              <i class="fa fa-step-forward" aria-hidden="true"></i>
-              <i class="fa fa-repeat" aria-hidden="true"></i>
+            <div class="player-box-center reset-lista debug-border">
+              <ul class="ico-play-buttons flex-mar10 debug-border-2">
+                <li><i class="fa fa-random" aria-hidden="true"></i></li>
+                <li><i class="fa fa-step-backward" aria-hidden="true"></i></li>
+                <li><i class="fa fa-play-circle-o" aria-hidden="true"></i></li>
+                <li><i class="fa fa-step-forward" aria-hidden="true"></i></li>
+                <li><i class="fa fa-repeat" aria-hidden="true"></i></li>
+              </ul>
+
+              <ul class="song-progress-bar flex-mar10 debug-border">
+                <li>0:25</li>
+                <li class="bar"><div></div></li>
+                <li>4:35</li>
+              </ul>
+
             </div>
-            <div class="player-box-right">
-              <i class="fa fa-list" aria-hidden="true"></i>
-              <i class="fa fa-desktop" aria-hidden="true"></i>
-              <i class="fa fa-volume-up" aria-hidden="true"></i>
+            <div class="player-box-right reset-lista debug-border">
+              <ul class="options flex-mar5 debug-border-2">
+                <li><i class="fa fa-list" aria-hidden="true"></i></li>
+                <li><i class="fa fa-desktop" aria-hidden="true"></i></li>
+                <li><i class="fa fa-volume-up" aria-hidden="true"></i></li>
+                <li class="bar"><div></div></li>
+              </ul>
             </div>
           </div>
         </footer>

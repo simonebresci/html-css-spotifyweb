@@ -201,6 +201,44 @@ footer{
 
 /* /FLOAT */
 
+
+/*  FLEX */
+.flex-mar5{
+  display: flex;
+}
+
+.flex-mar5 *{
+  margin-right: 5px;
+}
+
+.flex-mar10{
+  display: flex;
+}
+
+.flex-mar10 *{
+  margin-right: 10px;
+}
+
+.flex-mar15{
+  display: flex;
+}
+
+.flex-mar15 *{
+  margin-right: 15px;
+}
+
+.flex-col-mar5{
+  display: flex;
+}
+
+.flex-col-mar5 *{
+  margin-bottom: 5px;
+}
+
+
+/*  /FLEX */
+
+
 .display-none{
   display: none;
 }
@@ -685,9 +723,117 @@ footer{
 
 .player-box-left, .player-box-center, .player-box-right{
   color:white;
-  width: 400px;
+  min-width: 150px;
+  width: calc(100% / 3);
   height: 60px;
 }
+
+.player-box-left{
+  text-align: left;
+  vertical-align: middle;
+}
+
+.player-box-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-box-center .flex-mar10{
+  justify-content: center;
+}
+
+.player-box-center .ico-play-buttons i:last-child{
+  background-color: red;
+  margin-right: 0;
+}
+
+.player-box-center .song-progress-bar{
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.player-box-center .song-progress-bar{
+  width: 50%;
+  min-width: 150px;
+}
+
+/* .player-box-center .song-progress-bar li{
+  width: 100%;
+  background-color: green;
+} */
+
+.player-box-right{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.player-box-right .options{
+  width: 100%;
+
+}
+
+.player-box-center .song-progress-bar .bar,
+.player-box-right  .options .bar{
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  border: 2px solid white;
+  margin-top:4px;
+}
+
+
+
+.player-box-right  .options .bar{
+  width: 50%;
+}
+
+.player-box-right .options{
+  justify-content: flex-end;
+
+}
+
+
+
+
+.player-box-left .img-container{
+  width: 25%;
+}
+
+.player-box-left img{
+  width: 100%;
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.player-box-left .txt-current-song{
+  min-width: 80px;
+  width: 50%;
+  font-size: 12px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+
+
+
+.player-box-left .txt-current-song .title{
+  color:white;
+
+}
+
+.player-box-left .txt-current-song .author,
+.player-box-left .txt-current-song .name {
+  color:#777;
+}
+
+.player-box-left .ico-current-song i{
+  margin-bottom: 5px;
+}
+
+
 
 /* ********** /FOOTER CONTENT ************ */
 
