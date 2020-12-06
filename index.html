@@ -22,7 +22,7 @@
           <div class="sidebar-sx float-l bg-black">
 
             <!-- Sidebar sx content -->
-            <div class="sidebar-sx-content">
+            <div class="sidebar-sx-content debug-border-2">
 
 
               <!-- Logo sito -->
@@ -48,7 +48,7 @@
 
 
                 <!-- Playlist -->
-                <div class="sidebar-playlist reset-lista my-hidden-xs">
+                <div class="sidebar-playlist reset-lista my-hidden-xs ">
                   <ul class="link-style1-all">
                       <li>PLAYLIST</li>
                       <li><a href=""><div class="bg-icon-36-grey link-style1"><i class="fa fa-plus" aria-hidden="true"></i></div><span> Crea playlist</span></a></li>
@@ -56,6 +56,10 @@
                       <li><a href="">Nome playlist2</a></li>
                       <li><a href="">Nome playlist3</a></li>
                       <li><a href="">Nome playlist4</a></li>
+                      <li><a href="">Nome playlist5</a></li>
+                      <li><a href="">Nome playlist6</a></li>
+                      <li><a href="">Nome playlist7</a></li>
+                      <li><a href="">Nome playlist8</a></li>
 
                   </ul>
                 </div>
@@ -66,7 +70,7 @@
             <!-- /Sidebar sx content -->
 
             <!-- Profile -->
-            <div class="sidebar-sx-content">
+            <div class="sidebar-sx-content debug-border">
               <div class="sidebar-profile reset-lista">
                 <ul class="link-style1-all">
                   <li class="install-app"><a href=""><i class="fa fa-arrow-circle-o-down scale1-2" aria-hidden="true"></i><span class="my-visible-sm">Installa app</span></a></li>
@@ -314,22 +318,53 @@
                 <li class="last"><i class="fa fa-repeat" aria-hidden="true"></i></li>
               </ul>
 
-              <ul class="song-progress-bar flex-mar10 ">
+              <!-- <ul class="song-progress-bar flex-mar10 ">
                 <li>0:25</li>
-                <li class="bar"><div></div></li>
+
+                <li><div class="song-progress-bar-v2">
+                  <div class="bar-empty">
+                    <div class="bar-perc"></div>
+                    <div class="bar-cursor"></div>
+                </div></li>
                 <li class="last">4:35</li>
-              </ul>
+              </ul> -->
+
+              <!-- Song progress bar -->
+              <div class="song-progress-bar-v2">
+                <div class="current-time"> 0:25 </div>
+                <div class="bar-empty">
+                  <div class="bar-perc"></div>
+                  <div class="bar-cursor"></div>
+                </div>
+                <div class="song-time"> 4:35 </div>
+              </div>
+              <!-- /Song progress bar -->
 
             </div>
           <!-- /PLAYER box center -->
+
+          <!-- PLAYER box right -->
             <div class="player-box-right reset-lista ">
               <ul class="options flex-mar5 ">
                 <li><i class="fa fa-list" aria-hidden="true"></i></li>
                 <li><i class="fa fa-desktop" aria-hidden="true"></i></li>
                 <li><i class="fa fa-volume-up" aria-hidden="true"></i></li>
-                <li class="bar"><div></div></li>
+                <!-- <li class="bar"><div></div></li> -->
+
               </ul>
+
+              <!-- Song progress bar -->
+              <div class="song-volume-bar-v2">
+                <!-- <div class="current-time"> 0:25 </div> -->
+                <div class="bar-empty">
+                  <div class="bar-perc"></div>
+                  <!-- <div class="bar-cursor"></div> -->
+                </div>
+                <!-- <div class="song-time"> 4:35 </div> -->
+              </div>
+              <!-- /Song progress bar -->
             </div>
+          <!-- /PLAYER box right -->
           </div>
         </footer>
         <!-- /Footer player -->

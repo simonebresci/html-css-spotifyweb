@@ -67,7 +67,7 @@
 
 .sidebar-sx-content:first-child{
   height: calc(100% - 100px); /* Sottrarre alteza area profilo */
-  min-height: 300px;
+  min-height: 460px;
   overflow-y: hidden;
 }
 
@@ -505,9 +505,10 @@ footer{
 
 
 .sidebar-sx .sidebar-playlist{
-  height: calc(100% - 150px); /* Sottrai logo e box-playlist */
-  min-height: 50px;
-  max-height: 500px;
+  /* height: calc(100% - 220px);*/ /* Sottrai logo e box-playlist */
+  /* min-height: 50px; */
+  /* max-height: 500px; */
+  height: 60%;
   overflow-y: auto;
   /* TODO: scroll dimensioni giuste */
 }
@@ -760,6 +761,11 @@ footer{
   padding: 0px 8px;
 }
 
+.player-box-center .ico-play-buttons{
+  margin-bottom:10px;
+}
+
+
 .player-box-center .ico-play-buttons li:hover{
   transform:scale(1.1);
 }
@@ -782,6 +788,69 @@ footer{
 
 .player-box-center .song-progress-bar .last{
   margin-right: 0px;
+}
+
+.player-box-center .song-progress-bar-v2{
+  position: relative;
+  width: 100%;
+}
+
+.player-box-center .song-progress-bar-v2:hover .bar-perc{
+  border-color: #adff2f;
+}
+
+.player-box-center .song-progress-bar-v2:hover .bar-cursor{
+  display: unset;
+}
+
+.player-box-center .song-progress-bar-v2 .current-time,
+.player-box-center .song-progress-bar-v2 .song-time{
+  display: inline-block;
+  width: 30px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.player-box-center .song-progress-bar-v2 .current-time{
+  text-align: right;
+  margin-right: 5px;
+}
+
+.player-box-center .song-progress-bar-v2 .song-time{
+  text-align: left;
+  margin-left: 5px;
+}
+
+.player-box-center .song-progress-bar-v2 .bar-empty{
+  position: relative;
+  bottom: 2px;
+  display: inline-block;
+  width: calc(100% - 60px - 20px); /*Sottrai larghezza current-time+sont-time e margini */
+  height: 1px;
+  border: 2px solid #777;
+  border-radius: 2px;
+}
+
+.player-box-center .song-progress-bar-v2 .bar-perc{
+  position: absolute;
+  top:-2px;
+  left:-2px;
+  width: 75%;
+  height: 100%;
+  border: 2px solid white;
+  border-radius: 2px;
+}
+
+.player-box-center .song-progress-bar-v2 .bar-cursor{
+  position: absolute;
+  display: none;
+  top:50%;
+  left:75%;
+  transform: translate(-50%,-50%);
+  width:10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
 }
 
 /* .player-box-center .song-progress-bar li{
@@ -823,6 +892,41 @@ footer{
   justify-content: flex-end;
 
 }
+
+.player-box-right .song-volume-bar-v2{
+  position: relative;
+  width: 100%;
+}
+
+.player-box-right .song-volume-bar-v2:hover .bar-perc{
+  border-color: #adff2f;
+}
+
+.player-box-right .song-volume-bar-v2:hover .bar-cursor{
+  display: unset;
+}
+
+
+.player-box-right .song-volume-bar-v2 .bar-empty{
+  position: relative;
+  bottom: 2px;
+  display: inline-block;
+  width: calc(100%);
+  height: 1px;
+  border: 2px solid #777;
+  border-radius: 2px;
+}
+
+.player-box-right .song-volume-bar-v2 .bar-perc{
+  position: absolute;
+  top:-2px;
+  left:-2px;
+  width: 75%;
+  height: 100%;
+  border: 2px solid white;
+  border-radius: 2px;
+}
+
 
 
 
