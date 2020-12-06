@@ -895,7 +895,7 @@ footer{
 
 .player-box-right .song-volume-bar-v2{
   position: relative;
-  width: 100%;
+  width: 80%;
 }
 
 .player-box-right .song-volume-bar-v2:hover .bar-perc{
