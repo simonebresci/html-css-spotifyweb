@@ -30,30 +30,6 @@
 
 
 
-/* DEBUGG */
-.debug-border{
-  border: 1px solid violet;
-}
-
-.debug-border-all *{
-  border: 1px solid violet;
-}
-
-.debug-border-img img{
-  border: 1px solid violet;
-}
-.debug-border-span span{
-  border: 1px solid violet;
-}
-
-.debug-border-2{
-  border:1px solid orange;
-}
-
-
-.debug-bg{
-  background-color: violet;
-}
 
 .sidebar-sx, .main-content{
   /* Colore default testo */
