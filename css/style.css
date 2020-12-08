@@ -378,24 +378,6 @@ footer{
   background-color: rgba(0,0,0,0.1);
   }
 
-.reset-lista.lista-blue ul li a{
-  color: #031b4e;
-}
-.reset-lista.lista-bianco ul li {
-  color:white;
-}
-.reset-lista.lista-bianco ul li a{
-  color:#808794;
-}
-.reset-lista.lista-credits ul li:first-child{
-  font-weight: bold;
-}
-.reset-lista.lista-credits ul li{
-  font-weight: normal;
-}
-.reset-lista.lista-credits ul li a:hover{
-  color: #006aff;
-}
 .reset-lista.lista-icone-24 ul li a img{
   width: 24px;
   height: 24px;
@@ -714,6 +696,74 @@ usati per autori */
   align-items: center;
 }
 
+/* ALBUM IN RIPRODUZIONE */
+.player-box-left .img-container{
+  width: 25%;
+  max-width: 50px;
+}
+
+/* Animazione copertina */
+.player-box-left .img-container:hover{
+  transform: scale(1.2);
+}
+
+/* Dimensione copertina */
+.player-box-left img{
+  width: 100%;
+  max-width: 40px;
+  max-height: 40px;
+  margin-left: 5px;
+}
+
+/* Titolo e autore canzone in riproduzione */
+.player-box-left .txt-current-song{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 70px;
+  width: 50%;
+  max-width:110px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Animazione titolo + autore */
+.player-box-left .txt-current-song *:hover{
+  text-decoration: underline;
+}
+
+/* Icone cuoricino + cartella */
+.player-box-left .ico-current-song{
+  display: flex;
+  flex-direction: row;
+  color:#777;
+}
+
+/* Margini fra icone */
+.player-box-left .ico-current-song i{
+  margin-right: 10px;
+  margin-bottom:5px;
+}
+
+/* Animazione icone */
+.player-box-left .ico-current-song i:hover{
+  color:white;
+}
+
+/* Colore personalizzato titolo canzone */
+.player-box-left .txt-current-song .title{
+  color:white;
+}
+
+/* Colore titolo ed autore */
+.player-box-left .txt-current-song .author,
+.player-box-left .txt-current-song .name {
+  color:#777;
+}
+/* /ALBUM IN RIPRODUZIONE */
+
+
+
 /* /PLAYER BOX LEFT */
 
 /* PLAYER BOX CENTER */
@@ -747,23 +797,6 @@ usati per autori */
 .player-box-center .last i{
   margin-right: 0px;
 }
-
-/* OLD PROGRESS BAR */
-/* .player-box-center .song-progress-bar{
-  font-size: 11px;
-  font-weight: bold;
-  margin-top:10px;
-}
-
-.player-box-center .song-progress-bar{
-  width: 50%;
-  min-width: 150px;
-}
-
-.player-box-center .song-progress-bar .last{
-  margin-right: 0px;
-}
-*/
 
 /* PROGRESS BAR V2 */
 /* Pos relative per utilizzare elementi absolute all'interno */
@@ -836,13 +869,6 @@ usati per autori */
   background-color: white;
 }
 
-
-/* OLD PROGRESS BAR */
-/* .player-box-center .song-progress-bar li{
-  width: 100%;
-  background-color: green;
-} */
-
 /* PLAYER BOX CENTER */
 
 /* PLAYER BOX RIGHT */
@@ -864,22 +890,6 @@ usati per autori */
 .player-box-right .options li:hover{
   transform:scale(1.1);
 }
-
-/* OLD BAR */
-/* .player-box-center .song-progress-bar .bar,
-.player-box-right  .options .bar{
-  display: inline-block;
-  width: 100%;
-  height: 1px;
-  border: 2px solid #777;
-  margin-top:4px;
-
-
-
-.player-box-right  .options .bar{
-  width: 35%;
-}
-} */
 
 .player-box-right .options{
   justify-content: flex-end;
@@ -921,78 +931,6 @@ usati per autori */
 }
 /* /VOLUME BAR */
 /* PLAYER BOX RIGHT */
-
-
-/* PLAYER BOX LEFT */
-/* TODO: Porzione di codice fuori dalla sua sezione */
-
-/* ALBUM IN RIPRODUZIONE */
-.player-box-left .img-container{
-  width: 25%;
-  max-width: 50px;
-}
-
-/* Animazione copertina */
-.player-box-left .img-container:hover{
-  transform: scale(1.2);
-}
-
-/* Dimensione copertina */
-.player-box-left img{
-  width: 100%;
-  max-width: 40px;
-  max-height: 40px;
-  margin-left: 5px;
-}
-
-/* Titolo e autore canzone in riproduzione */
-.player-box-left .txt-current-song{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 70px;
-  width: 50%;
-  max-width:110px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-/* Animazione titolo + autore */
-.player-box-left .txt-current-song *:hover{
-  text-decoration: underline;
-}
-
-/* Icone cuoricino + cartella */
-.player-box-left .ico-current-song{
-  display: flex;
-  flex-direction: row;
-  color:#777;
-}
-
-/* Margini fra icone */
-.player-box-left .ico-current-song i{
-  margin-right: 10px;
-  margin-bottom:5px;
-}
-
-/* Animazione icone */
-.player-box-left .ico-current-song i:hover{
-  color:white;
-}
-
-/* Colore personalizzato titolo canzone */
-.player-box-left .txt-current-song .title{
-  color:white;
-}
-
-/* Colore titolo ed autore */
-.player-box-left .txt-current-song .author,
-.player-box-left .txt-current-song .name {
-  color:#777;
-}
-/* /ALBUM IN RIPRODUZIONE */
-
-/* PLAYER BOX LEFT */
 
 /* ********** /FOOTER CONTENT ************ */
 
