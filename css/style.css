@@ -1,8 +1,16 @@
 /* NOTE REFACTORING
-1) Commenti html
-2) Commenti class
-4) Creare framework personale
-5) Creare css debug*/
+
+/* Modifiche strutturali */
+/*
+1) Creare file css dedicato per UTILITIES e classi visibilità
+2) Creare file css dedicato mediaquery
+*/
+
+/* Elementi pagina */
+/*
+1) Rendere oggetto album un oggetto generico riutilizzabile
+2) Rendere barra progressione canzone un oggetto generico riutilizzabile
+*/
 
 
 /* Colori */
@@ -27,19 +35,16 @@
 }
 /* /RESET PAGINA */
 
-
-
-
-
+/* Colore di default sezioni principali sito */
 .sidebar-sx, .main-content{
   /* Colore default testo */
   color:#777;
 }
 
-
+/* Container di tutto il sito */
 .container-sito{
   width: 100vw;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 100px); /* Sottrai altezza footer */
   max-width: 100%;
 }
 
@@ -48,27 +53,26 @@
   height: calc(100vh - 90px); /*Sottrarre altezza fissa footer */
 }
 
+/* Imposta altezza primo sidebar-sx-content */
 .sidebar-sx-content:first-child{
   height: calc(100% - 100px); /* Sottrarre alteza area profilo */
   min-height: 460px;
   overflow-y: hidden;
 }
 
+/* MAIN-LINKS (home-cerca-latualibreria) */
 .main-links{
   height: 300px;
   margin-bottom:30px;
 }
-
 .main-links ul li{
   margin-bottom: 10px;
 }
-
 .main-links ul li span{
   display: inline-block;
   line-height: 24px; /* altezza pari ad altezza icona */
 }
-
-
+/* Evidenzia elemento selezionato con blocco colorato a lato */
 .main-links ul li:first-child::before{
   position: relative;
   content:"";
@@ -79,95 +83,100 @@
   border: 2px solid #adff2f;
 
 }
-
-/* Work around - in sito finale, trovare soluzione alternativa */
+/* Work around - posizione evidenziatura verdolina
+in sito finale, trovare soluzione alternativa */
 .main-links ul li:first-child{
   position: relative;
   left: -4px;
   /* lo spessore del bordo verdolino, sposta anche l'elemento della lista */
 }
 
-
-
+/* Imposta grandezza icone */
 .main-links ul li img{
   /* Allineamento rispetto al testo lista */
   position: relative;
   bottom:2px;
   margin-right: 5px;
   vertical-align: middle;
-
 }
+/* MAIN-LINKS (home-cerca-latualibreria) */
 
+
+/* CONTAINER SIDEBAR-SX + MAIN-CONTENT
+nota: contiene float sidebar-sx + float main-content*/
 .container-sidebar-main{
   width: 100%;
   min-width: 480px;
 }
 
+/* /CONTAINER SIDEBAR-SX + MAIN-CONTENT */
 
+/* SIDEBAR-SX - PERSONALIZZAZIONE*/
 .sidebar-sx{
   overflow:hidden;
 }
-
-
 .sidebar-sx .sidebar-profile{
   height: 70px; /* 100px -30px padding */
 }
-
 .sidebar-sx .sidebar-profile ul li{
   padding: 10px 0;
 }
-
 .sidebar-sx .sidebar-profile ul li i{
   margin-right: 10px;
 }
-
 .sidebar-sx .sidebar-profile .install-app{
   font-size: 12px;
   border-bottom: 2px solid #777;
 }
-
 .sidebar-sx .sidebar-profile .account a{
   color:white;
   font-weight: bold;
 }
+/* /SIDEBAR-SX */
 
-
+/* CONTAINER MAIN
+Container per main-top-content-fixed + main-content */
 .container-main{
   width: calc(100% - 230px); /* Larghezza definita nelle media query */
   overflow-y: auto;
 }
+/* CONTAINER MAIN */
 
 
+/* MAIN TOP CONTENT FIXED */
+/* Elemento fisso nella pagina */
 .main-top-content-fixed{
   position: fixed;
   height: 90px;
   width: calc(100% - 230px);
-  z-index: 999;
+  z-index: 999; /* in sovraimpressione rispetto a tutto */
 }
+/* /MAIN TOP CONTENT FIXED */
 
+
+/* MAIN CONTENT */
+/* Contenuto principale del sito */
 .main-content{
   width: 100%;
   margin-top: 90px; /*Altezza fixed area "effettua upgrade"*/
-
 }
+/* /MAIN CONTENT */
 
+/* FOOTER SITo */
+/* Contiene il player principale del sito */
 footer{
   height: 90px;
   width: 100vw;
   max-width: 100%;
   min-width: 480px;
 }
+/* /FOOTER SITo */
 
 
 /* DEBUGG */
 
 
 /* *******  UTILITIES  ***** */
-.container-w100{
-  width: 100%;
-}
-
-
 /* FLOAT */
 /* float elemento a sinistra */
 .float-l{
@@ -183,11 +192,11 @@ footer{
   display:table;
   clear:both;
 }
-
 /* /FLOAT */
 
 
 /*  FLEX */
+/* Utilities per blocchi di tipo flex */
 .flex-mar5{
   display: flex;
 }
@@ -219,15 +228,18 @@ footer{
 .flex-col-mar5 *{
   margin-bottom: 5px;
 }
-
-
 /*  /FLEX */
 
-
+/* Display-none */
+/* Elimina elemento dalla pagina */
 .display-none{
   display: none;
 }
+/* /Display-none */
 
+
+/* SCALE ELEMENTO*/
+/* Ingrandisce-rimpicciolisce elemento in base al valore espresso */
 .scale1-2{
   transform: scale(1.2);
 }
@@ -256,10 +268,16 @@ footer{
   transform: scale(16);
 }
 
+/* /SCALE ELEMENTO*/
+
+/* Bordo arrotondato di 5px */
 .border-radius-5{
   border-radius: 5px;
 }
+/* /Bordo arrotondato di 5px */
 
+
+/* SFONDI CON COLORI PERSONALIZZATI */
 .bg-white{
   background-color: #fff;
 }
@@ -272,8 +290,6 @@ footer{
   background-color: rgba(8,11,18,0.5) /*#080b12;*/
 }
 
-
-
 .bg-main{
   background-color:#141922;
 }
@@ -285,26 +301,27 @@ footer{
 .bg-transparent{
   background-color: rga(0,0,0,0);
 }
+/* /SFONDI PERSONALIZZATI */
 
-
-
+/* Testo in grassetto */
 .txt-bold{
   font-weight: bold;
 }
-
+/* Testo in grassetto */
+/* CENTRATURA TESTO */
 .txt-left{
  text-align: left;
 }
-
 .txt-center{
   text-align: center;
 }
-
 .txt-right{
  text-align: right;
 }
+/* /CENTRATURA TESTO */
 
-/* Provvisorio  */
+
+/* Bottone trasparente con testo bianco */
 .btn-transparent{
   position: relative;
   bottom: 2px;
@@ -313,29 +330,13 @@ footer{
   font-weight: bold;
   font-size: 15px;
 }
+/* Bottone trasparente con testo bianco */
 
-/*
-.btn-transparent::before{
-  content: "";
-  width: 60px;
-  border-left: 2px solid white;
-  border-radius: 50%;
-
-}
-
-.btn-transparent::after{
-  content: "";
-  width: 60px;
-  border-right: 2px solid white;
-  border-radius: 50%;
-
-} */
-
-/* /Provvisorio */
-
+/* Elemento disabilitato */
 .disabled{
   opacity: 50%;
 }
+/* /Elemento disabilitato */
 
 /* LINK PERSONALIZZAZIONE */
 .link-style1, .link-style1-all a{
@@ -348,7 +349,6 @@ footer{
   text-shadow: 0px 0px 5px rgba(0,0,0,0.4);
   text-decoration: none;
 }
-
 /* Animazione alternativa su icone */
 .link-style1:hover img{
   background-color: rgba(173,255,47,0.5);
@@ -356,15 +356,10 @@ footer{
   border-radius: 50%;
 
 }
-
 .link-style1-all .bg-icon-36-grey:hover{
   background-color: white;
   color: black;
 }
-
-
-
-
 /* LINK PERSONALIZZAZIONE */
 
 
@@ -379,7 +374,6 @@ footer{
 .reset-lista ul li a{
   text-decoration: none;
 }
-
 .reset-lista ul li a:hover{
   background-color: rgba(0,0,0,0.1);
   }
@@ -387,61 +381,39 @@ footer{
 .reset-lista.lista-blue ul li a{
   color: #031b4e;
 }
-
 .reset-lista.lista-bianco ul li {
   color:white;
 }
-
 .reset-lista.lista-bianco ul li a{
   color:#808794;
 }
-
 .reset-lista.lista-credits ul li:first-child{
   font-weight: bold;
 }
-
 .reset-lista.lista-credits ul li{
   font-weight: normal;
 }
-
 .reset-lista.lista-credits ul li a:hover{
   color: #006aff;
 }
-
 .reset-lista.lista-icone-24 ul li a img{
   width: 24px;
   height: 24px;
 }
-
 .reset-lista.lista-inline ul li{
   display: inline-block;
 }
 
+/* ****RESET LISTA GENERICO SENZA COLORE */
+
+/* Link in grassetto */
 .link-bold a{
   font-weight: bold;
 }
+/* /Link in grassetto */
 
-/* ****RESET LISTA GENERICO SENZA COLORE */
 
-/* .lista-no-bullets ul{
-  list-style: none;
-  padding-left: 5px;
-} */
-
-.border-grey-left{
-  border-left: 1px solid #767695;
-}
-
-/* Padding custom di 15px */
-.bl-block-h15{
-  width: 100%;
-  height: 15px;
-}
-
-.bl-pad15{
-  padding: 15px;
-}
-
+/* Bottone grigio con testo nero - dimensioni 36x36*/
 .bg-icon-36-grey{
   display: inline-flex;
   justify-content: center;
@@ -450,69 +422,56 @@ footer{
   height: 36px;
   background-color: #a3a3a3;
   color:black;
-
 }
-
-
-
-
+/* /Bottone grigio con testo nero - dimensioni 36x36*/
 /* *******  UTILITIES  ******** */
 
 
 /********* SIDEBAR-SX ***********/
 /* NOTA: NON DARE PADDING DIRETTAMENTE SU SIDEBAR-SX PERCHè ALTRIMENTI NON FUNZIONA
    IL RESPONSIVE IN ALTEZZA! */
+
+/* Larghezza sidebar-sx */
 .sidebar-sx{
   width: 230px;
 }
-
 .sidebar-sx-content, .main-top-content-fixed, .main-content, .footer-content-flex{
   padding: 15px;
 }
-
 .sidebar-sx-content{
   font-size: 14px;
 }
-
-
 .sidebar-sx .box-logo{
   width: 100%;
   height: 90px;
 }
-
+/* Logo sito - imposta dimensioni immagine */
 .sidebar-sx .box-logo img{
   width: 140px;
 }
-
+/* MAIN LINKS */
 .sidebar-sx .main-links{
   /* width: 100px; */
   height: 120px;
 }
+/* /MAIN LINKS */
 
-
+/* PLAYLIST */
 .sidebar-sx .sidebar-playlist{
-  /* height: calc(100% - 220px);*/ /* Sottrai logo e box-playlist */
-  /* min-height: 50px; */
-  /* max-height: 500px; */
   height: 60%;
   overflow-y: auto;
-  /* TODO: scroll dimensioni giuste */
 }
-
 .sidebar-sx .sidebar-playlist ul li:first-child{
   color:white;
   font-weight: bold;
 }
-
 .sidebar-sx .sidebar-playlist ul li{
   margin-bottom: 15px;
 }
-
 .sidebar-sx .sidebar-playlist [class*="icon"]{
   margin-right: 5px;
 }
-
-
+/* /(PLAYLIST */
 
 /********* /SIDEBAR-SX ***********/
 
@@ -529,6 +488,7 @@ footer{
 }
 
 
+/* BOTTTONE PERSONALIZZATO "EFFETTUA UPGRADE" */
 .main-top-content-fixed .btn-left, .main-top-content-fixed .btn-right{
   display: inline-block;
   content: " ";
@@ -539,7 +499,6 @@ footer{
 }
 
 .main-top-content-fixed .btn-left{
-
   border-top-left-radius: 50%;
   border-bottom-left-radius: 50%;
   transform: translate(+50%);
@@ -563,6 +522,7 @@ footer{
   border-top: 1px solid white;
   border-bottom: 1px solid white;
 }
+/* /BOTTTONE PERSONALIZZATO "EFFETTUA UPGRADE" */
 
 /* ******* MAIN-TOP-CONTENT-FIXED ******** */
 
@@ -570,22 +530,20 @@ footer{
 /* ******* MAIN-CONTENT ******** */
 
 
-/* NAVBAR */
+/* NAVBAR - (In evidenza, podcast, classifiche...) */
 .main-navbar-flex{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 15px 0;
 }
-
 .main-navbar-flex li{
   padding-right: 15px;
 }
-
 .main-navbar-flex li a{
   text-transform: uppercase;
 }
-
+/* Evidenzia elemento selezionato */
 .main-navbar-flex li:first-child::after{
   position: relative;
   content:"";
@@ -600,14 +558,17 @@ footer{
 }
 /* /NAVBAR */
 
+/* Margine fra le sezioni */
 .main-content section{
   margin-bottom: 30px;
 }
 
+/* H2 personalizzato per la sezione "Recently played" */
 .main-content .sec-recently-played h2{
   margin-bottom: 30px;
 }
 
+/* STILE GENERICO H2,H3 */
 .main-content h2{
   font-size: 24px;
   color: white;
@@ -618,22 +579,26 @@ footer{
   font-size: 12px;
   padding-bottom:25px;
 }
+/* /STILE GENERICO H2,H3 */
 
 
+/* Box albums flex */
 .main-content .box-albums-flex{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
 }
+/* /Box albums flex */
 
 
-
+/* Album - imposta larghezza copertine */
 .main-content .box-albums-flex .album{
   width: calc((100% / 6) - (15px / 6) * 5); /* Nota: un margine ogni sei non deve essere conteggiato */
   /* max-width: 150px; */
   margin-right: 15px;
 }
+/* /Album - imposta larghezza copertine */
+
 
 /* Elimina margine sugli elementi che chiudono la riga */
 .main-content .box-albums-flex .album:nth-child(6n){
@@ -642,7 +607,9 @@ footer{
 
 
 
+/* ALBUM - personalizzazione stile */
 
+/* Titolo */
 .box-albums-flex .album .title{
   color: white;
   font-size: 16px;
@@ -650,6 +617,7 @@ footer{
   padding: 10px 0;
 }
 
+/* Autore */
 .box-albums-flex .album .author{
   font-size: 12px;
   font-weight: bold;
@@ -657,15 +625,18 @@ footer{
 
 }
 
+/* Imposta position relative per posizionare overlay con position absolute */
 .box-albums-flex .album .img-container{
   position: relative;
 }
 
+/* Dimensione immagine */
 .box-albums-flex .album img{
   position: relative;
   width: 100%;
 }
 
+/* Overlay in trasparenza */
 .box-albums-flex .album .img-container .overlay-bg{
   position: absolute;
   top:0px;
@@ -676,6 +647,7 @@ footer{
   color: rgba(0,0,0,0);
 }
 
+/* Bottone play */
 .box-albums-flex .album .img-container .overlay-play{
   position: absolute;
   display: none;
@@ -685,7 +657,7 @@ footer{
 
 
 }
-
+/* ANIMAZIONI MOUSE HOVER SU ALBUM */
 .box-albums-flex .album .img-container:hover .overlay-bg{
   background-color: rgba(0,0,0,0.5);
 }
@@ -695,6 +667,10 @@ footer{
   color: rgba(255,255,255,1);
 }
 
+/* /ANIMAZIONI MOUSE HOVER SU ALBUM */
+
+/* ALBUM con copertina a forma di cerchio
+usati per autori */
 .box-albums-flex.box-circle .album img{
   border-radius: 50%;
 }
@@ -702,17 +678,22 @@ footer{
 .box-albums-flex.box-circle  .album .img-container .overlay-bg{
   border-radius: 50%;
 }
-
+/* /ALBUM - personalizzazione stile */
 
 /* ******* MAIN-CONTENT ******** */
 
 
 /* ********** FOOTER CONTENT ************ */
+
+/* FOOTER CONTENT FLEX*/
 .footer-content-flex{
   display: flex;
   justify-content: space-between;
 }
+/* /FOOTER CONTENT FLEX*/
 
+/* PLAYER BOX LEFT */
+/* Imposta proprietà comuni */
 .player-box-left, .player-box-center, .player-box-right{
   color:white;
   min-width: 150px;
@@ -720,17 +701,22 @@ footer{
   height: 60px;
 }
 
+/* Allineamento contenuto */
 .player-box-left{
   text-align: left;
   vertical-align: middle;
 }
 
+/* Allineamento elementi */
 .player-box-left .img-container{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* /PLAYER BOX LEFT */
+
+/* PLAYER BOX CENTER */
 .player-box-center{
   display: flex;
   flex-direction: column;
@@ -738,11 +724,12 @@ footer{
   align-items: center;
 }
 
+/* Allinea elementi al centro */
 .player-box-center .flex-mar10{
   justify-content: center;
 }
 
-
+/* Personalizzazione bottoni riproduzione musicale */
 .player-box-center .play-button{
   padding: 0px 8px;
 }
@@ -750,18 +737,19 @@ footer{
 .player-box-center .ico-play-buttons{
   margin-bottom:10px;
 }
-
-
 .player-box-center .ico-play-buttons li:hover{
   transform:scale(1.1);
 }
+/* /Personalizzazione bottoni riproduzione musicale */
 
+/* Annulla ultimo margine */
 .player-box-center .last,
 .player-box-center .last i{
   margin-right: 0px;
 }
 
-.player-box-center .song-progress-bar{
+/* OLD PROGRESS BAR */
+/* .player-box-center .song-progress-bar{
   font-size: 11px;
   font-weight: bold;
   margin-top:10px;
@@ -775,20 +763,25 @@ footer{
 .player-box-center .song-progress-bar .last{
   margin-right: 0px;
 }
+*/
 
+/* PROGRESS BAR V2 */
+/* Pos relative per utilizzare elementi absolute all'interno */
 .player-box-center .song-progress-bar-v2{
   position: relative;
   width: 100%;
 }
 
+/* Animazione barra */
 .player-box-center .song-progress-bar-v2:hover .bar-perc{
   border-color: #adff2f;
 }
-
+/* Animazione cursore posizione corrente */
 .player-box-center .song-progress-bar-v2:hover .bar-cursor{
   display: unset;
 }
 
+/* Testo minuto corrente e durata canzone */
 .player-box-center .song-progress-bar-v2 .current-time,
 .player-box-center .song-progress-bar-v2 .song-time{
   display: inline-block;
@@ -796,17 +789,19 @@ footer{
   font-size: 11px;
   font-weight: bold;
 }
-
+/* Testo minuto corrente */
 .player-box-center .song-progress-bar-v2 .current-time{
   text-align: right;
   margin-right: 5px;
 }
 
+/* Testo durata canzone */
 .player-box-center .song-progress-bar-v2 .song-time{
   text-align: left;
   margin-left: 5px;
 }
 
+/* Barra vuota */
 .player-box-center .song-progress-bar-v2 .bar-empty{
   position: relative;
   bottom: 2px;
@@ -817,6 +812,7 @@ footer{
   border-radius: 2px;
 }
 
+/* Riempimento barra al minuto corrente */
 .player-box-center .song-progress-bar-v2 .bar-perc{
   position: absolute;
   top:-2px;
@@ -827,6 +823,7 @@ footer{
   border-radius: 2px;
 }
 
+/* Animazione cursore rotondo */
 .player-box-center .song-progress-bar-v2 .bar-cursor{
   position: absolute;
   display: none;
@@ -839,46 +836,57 @@ footer{
   background-color: white;
 }
 
+
+/* OLD PROGRESS BAR */
 /* .player-box-center .song-progress-bar li{
   width: 100%;
   background-color: green;
 } */
 
+/* PLAYER BOX CENTER */
+
+/* PLAYER BOX RIGHT */
+
+/* Player box right flex */
 .player-box-right{
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
+/* Player box right flex */
 
+/* Bottoni (opzioni, schermo, volume) */
 .player-box-right .options{
   width: 100%;
-
 }
 
+/* Animazioni elementi barra */
 .player-box-right .options li:hover{
   transform:scale(1.1);
 }
 
-.player-box-center .song-progress-bar .bar,
+/* OLD BAR */
+/* .player-box-center .song-progress-bar .bar,
 .player-box-right  .options .bar{
   display: inline-block;
   width: 100%;
   height: 1px;
   border: 2px solid #777;
   margin-top:4px;
-}
 
 
 
 .player-box-right  .options .bar{
   width: 35%;
 }
+} */
 
 .player-box-right .options{
   justify-content: flex-end;
-
 }
 
+
+/* VOLUME BAR */
 .player-box-right .song-volume-bar-v2{
   position: relative;
   width: 80%;
@@ -892,10 +900,9 @@ footer{
   display: unset;
 }
 
-
 .player-box-right .song-volume-bar-v2 .bar-empty{
   position: relative;
-  bottom: 2px;
+  bottom: 4px;
   display: inline-block;
   width: calc(100%);
   height: 1px;
@@ -907,25 +914,30 @@ footer{
   position: absolute;
   top:-2px;
   left:-2px;
-  width: 75%;
+  width: 45%;
   height: 100%;
   border: 2px solid white;
   border-radius: 2px;
 }
+/* /VOLUME BAR */
+/* PLAYER BOX RIGHT */
 
 
+/* PLAYER BOX LEFT */
+/* TODO: Porzione di codice fuori dalla sua sezione */
 
-
-
+/* ALBUM IN RIPRODUZIONE */
 .player-box-left .img-container{
   width: 25%;
   max-width: 50px;
 }
 
+/* Animazione copertina */
 .player-box-left .img-container:hover{
   transform: scale(1.2);
 }
 
+/* Dimensione copertina */
 .player-box-left img{
   width: 100%;
   max-width: 40px;
@@ -933,6 +945,7 @@ footer{
   margin-left: 5px;
 }
 
+/* Titolo e autore canzone in riproduzione */
 .player-box-left .txt-current-song{
   display: flex;
   flex-direction: column;
@@ -944,48 +957,44 @@ footer{
   font-weight: bold;
 }
 
+/* Animazione titolo + autore */
+.player-box-left .txt-current-song *:hover{
+  text-decoration: underline;
+}
+
+/* Icone cuoricino + cartella */
 .player-box-left .ico-current-song{
   display: flex;
   flex-direction: row;
   color:#777;
 }
 
-.player-box-left .txt-current-song *:hover{
-  text-decoration: underline;
-}
-
+/* Margini fra icone */
 .player-box-left .ico-current-song i{
   margin-right: 10px;
   margin-bottom:5px;
 }
 
+/* Animazione icone */
 .player-box-left .ico-current-song i:hover{
   color:white;
 }
 
-
+/* Colore personalizzato titolo canzone */
 .player-box-left .txt-current-song .title{
   color:white;
-
 }
 
+/* Colore titolo ed autore */
 .player-box-left .txt-current-song .author,
 .player-box-left .txt-current-song .name {
   color:#777;
 }
+/* /ALBUM IN RIPRODUZIONE */
 
-/* .player-box-left .ico-current-song i{
-  margin-bottom: 5px;
-} */
-
-
+/* PLAYER BOX LEFT */
 
 /* ********** /FOOTER CONTENT ************ */
-
-
-
-
-
 
 
 /* *********** MEDIAQUERY DEVICES ************ */
@@ -1081,6 +1090,7 @@ footer{
   /* /VISIBLE */
   /* /CLASSI VISIBILITA' */
 
+  /* RIDUCI NUMERO DI ALBUM PER RIGA */
   .main-content .box-albums-flex .album{
     width: calc((100% / 4) - (15px / 4) * 3); /* Nota: un margine ogni quattro non deve essere conteggiato */
     /* max-width: 150px; */
@@ -1089,7 +1099,7 @@ footer{
   .main-content .box-albums-flex .album:nth-child(4n){
     margin-right: 0px;
   }
-
+  /* /RIDUCI NUMERO DI ALBUM PER RIGA */
 
   /* Debug help */
   /* .container-sito::before{
@@ -1143,6 +1153,7 @@ footer{
   /* /VISIBLE */
   /* /CLASSI VISIBILITA' */
 
+  /* RIDUCI NUMERO DI ALBUM PER RIGA */
   .main-content .box-albums-flex .album{
     width: calc((100% / 2) - (15px / 2) * 1); /* Nota: un margine ogni quattro non deve essere conteggiato */
     /* max-width: 150px; */
@@ -1151,7 +1162,9 @@ footer{
   .main-content .box-albums-flex .album:nth-child(2n){
     margin-right: 0px;
   }
+  /* /RIDUCI NUMERO DI ALBUM PER RIGA */
 
+  /* CAMBIA DISPOSIZIONE ICONE ALBUM IN RIPRODUZIONE */
   .player-box-left .ico-current-song{
     display: flex;
     flex-direction: column;
@@ -1163,6 +1176,7 @@ footer{
     margin-bottom: 5px;
     margin-right: 5px;
   }
+  /* /CAMBIA DISPOSIZIONE ICONE ALBUM IN RIPRODUZIONE */
 
   /* Debug help */
   /* .container-sito::before{
@@ -1216,6 +1230,7 @@ footer{
   /* /VISIBLE */
   /* /CLASSI VISIBILITA' */
 
+  /* RIDUCI DIMENSIONI SIDEBAR-SX E MOSTRA SOLO ICONE */
   .sidebar-sx{
     /* min-width: 40px; */
     width: 50px;
@@ -1243,6 +1258,7 @@ footer{
     margin-right: 0;
   }
 
+  /* Aggiorna dimensioni containers */
   .container-main, .main-top-content-fixed{
     width: calc(100% - 50px);
     /* min-width: 430px; /* 430 valore corretto */
@@ -1263,8 +1279,6 @@ footer{
     left:0;
   }
 
-
-
   /* Debug help */
   /* .container-sito::before{
     position: absolute;
@@ -1273,16 +1287,12 @@ footer{
     color: violet;
   } */
 
-
-  /* .container-main{
-
-    width: calc(100vw - 200px);
-  } */
-
+  /* Riduci padding generale in versione mobile */
   .sidebar-sx-content, .main-top-content-fixed, .main-content, .footer-content-flex{
     padding: 10px;
   }
 
+  /* /RIDUCI DIMENSIONI SIDEBAR-SX E MOSTRA SOLO ICONE */
 
 
 }
@@ -1290,9 +1300,9 @@ footer{
 
 /* *********** MEDIAQUERY HEIGHT ************* */
 @media screen and (max-height:190px){
+  /* Nascondi barra fixed quando finestra diventa troppo piccola in altezza */
   .main-top-content-fixed{
     display: none;
   }
 }
-
 /* *********** /MEDIAQUERY HEIGHT ************* */
